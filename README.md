@@ -29,7 +29,9 @@ No modules.
 
 ## Inputs
 
-No inputs.
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| password\_version | The version of the password to use. | `number` | n/a | yes |
 
 ## Outputs
 
