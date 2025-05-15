@@ -1,20 +1,38 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":dependencyDashboard"],
-  "labels": ["dependencies"],
-  "assignees": ["methridge"],
+  "extends": [
+    "config:recommended",
+    ":dependencyDashboard"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "assignees": [
+    "methridge"
+  ],
   "prHourlyLimit": 10,
-  "reviewers": ["methridge"],
+  "reviewers": [
+    "methridge"
+  ],
   "packageRules": [
     {
-      "matchPackagePrefixes": ["hashicorp/"],
-      "matchUpdateTypes": ["minor", "patch"],
-      "enabled": false
+      "matchUpdateTypes": [
+        "minor",
+        "patch"
+      ],
+      "enabled": false,
+      "matchPackageNames": [
+        "hashicorp/{/,}**"
+      ]
     },
     {
-      "matchPackagePrefixes": ["terraform-linters/"],
-      "matchUpdateTypes": ["patch"],
-      "enabled": false
+      "matchUpdateTypes": [
+        "patch"
+      ],
+      "enabled": false,
+      "matchPackageNames": [
+        "terraform-linters/{/,}**"
+      ]
     }
   ]
 }
